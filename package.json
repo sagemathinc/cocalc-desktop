@@ -1,5 +1,5 @@
 {
-  "name": "my-electron-app",
+  "name": "cocalc-desktop",
   "version": "1.0.0",
   "description": "This is the CoCalc desktop application.",
   "main": "main.js",

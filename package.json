@@ -1,7 +1,7 @@
 {
   "name": "my-electron-app",
   "version": "1.0.0",
-  "description": "This is Hello World.",
+  "description": "This is the CoCalc Electron application.",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "William Stein",
-  "license": "ISC",
+  "license": "AGPLv3 s.t. "Commons Clause" – see LICENSE.md for details",
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",
     "@electron-forge/maker-deb": "^6.0.0-beta.54",

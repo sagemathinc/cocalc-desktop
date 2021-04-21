@@ -1,5 +1,6 @@
 {
   "name": "cocalc-desktop",
+  "productName": "CoCalc",
   "version": "1.0.0",
   "description": "This is the CoCalc desktop application.",
   "main": "main.js",
@@ -36,9 +37,7 @@
         },
         {
           "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
+          "platforms": ["darwin"]
         },
         {
           "name": "@electron-forge/maker-deb",

@@ -33,6 +33,20 @@ const template = [
     ],
   },
   {
+    label: 'Edit',
+    submenu: [
+      { role: 'undo' },
+      { role: 'redo' },
+      { type: 'separator' },
+      { role: 'cut' },
+      { role: 'copy' },
+      { role: 'paste' },
+      { type: 'separator' },
+      { role: 'delete' },
+      { role: 'selectAll' },
+    ]
+  },
+  {
     label: "View",
     submenu: [
       { role: "reload" },

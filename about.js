@@ -5,7 +5,7 @@ function aboutWindow() {
   openAboutWindow({
     product_name: "CoCalc",
     homepage: "https://cocalc.com",
-    icon_path: "https://cocalc.com/static/e15f5baa10dd1070b35199fbe332f397.svg",
+    icon_path: "https://storage.googleapis.com/cocalc-extra/cocalc-logo.svg",
     license: "AGPL+common clause",
     copyright: "Copyright (c) 2021 SageMath, Inc.",
     package_json_dir: __dirname,

@@ -2,8 +2,12 @@
 
 ## A minimal _**first**_ usable release
 
-- [ ] Typescript 
-- [ ] Icon
-- [ ] Change Help menu to be about CoCalc (?)
+- [ ] cut/paste/copy are missing!
+- [x] Icon
+- [x] Change Help menu to be about CoCalc (?)
 - [ ] About cocalc-desktop menu item
-- [ ] make it so quitting the application works on macOS.
+- [x] make it so quitting the application works on macOS.
+
+## After that:
+
+- [ ] typescript

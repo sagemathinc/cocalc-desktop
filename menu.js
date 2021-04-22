@@ -1,4 +1,5 @@
 const { app, Menu, shell } = require("electron");
+const { createWindow } = require("./window");
 
 const isMac = process.platform === "darwin";
 
@@ -23,7 +24,13 @@ const template = [
     : []),
   {
     label: "File",
-    submenu: [isMac ? { role: "close" } : { role: "quit" }],
+    submenu: [
+      {
+        label: "New Window",
+        click: createWindow,
+      },
+      isMac ? { role: "close" } : { role: "quit" },
+    ],
   },
   {
     label: "View",

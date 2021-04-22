@@ -1,19 +1,39 @@
 const { BrowserWindow } = require("electron");
+const windowStateKeeper = require("electron-window-state");
 const path = require("path");
+let windowState = undefined;
 
 function createWindow(isAdditional) {
+  if (windowState == null) {
+    windowState = windowStateKeeper({
+      defaultWidth: 1000,
+      defaultHeight: 800,
+    });
+  }
   const win = new BrowserWindow({
+    show: false,
     useContentSize: true,
-    width: 1024,
-    height: 768,
-    x: isAdditional ? Math.round(200 * Math.random()) : undefined,
-    y: isAdditional ? Math.round(200 * Math.random()) : undefined,
+    width: isAdditional ? 1024 : windowState.width,
+    height: isAdditional ? 768 : windowState.height,
+    x: isAdditional ? Math.round(200 * Math.random()) : windowState.x,
+    y: isAdditional ? Math.round(200 * Math.random()) : windowState.y,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
   });
 
+  if (!isAdditional) {
+    windowState.manage(win);
+  }
+
   win.loadFile("index.html");
+
+  // See https://dev.to/vadimdemedes/making-electron-apps-feel-native-on-mac-52e8
+  // though I don't think it really helps at all for us.  Waiting the 1s before
+  // showing does seem to feel better though, so I'm leaving this.
+  win.once("ready-to-show", () => {
+    setTimeout(() => win.show(), 1000);
+  });
 
   // If the user has selected "Confirm: always ask for confirmation
   // before closing the browser window" in their CoCalc account

@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron-forge start",
     "package": "electron-builder",
-    "universal": "electron-builder --universal"
+    "universal": "electron-builder --universal",
+    "prettier": "prettier -w *.js"
   },
   "keywords": [],
   "author": "William Stein",
@@ -20,11 +21,13 @@
     "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
     "@electron-forge/maker-zip": "^6.0.0-beta.54",
     "electron": "^12.0.4",
-    "electron-builder": "^22.10.5"
+    "electron-builder": "^22.10.5",
+    "prettier": "^2.2.1"
   },
   "dependencies": {
     "about-window": "^1.14.0",
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-window-state": "^5.0.3"
   },
   "config": {
     "forge": {

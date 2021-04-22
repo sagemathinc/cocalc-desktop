@@ -23,6 +23,7 @@
     "electron-builder": "^22.10.5"
   },
   "dependencies": {
+    "about-window": "^1.14.0",
     "electron-squirrel-startup": "^1.0.0"
   },
   "config": {
@@ -37,7 +38,9 @@
         },
         {
           "name": "@electron-forge/maker-zip",
-          "platforms": ["darwin"]
+          "platforms": [
+            "darwin"
+          ]
         },
         {
           "name": "@electron-forge/maker-deb",

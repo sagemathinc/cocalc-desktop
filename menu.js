@@ -1,6 +1,6 @@
 const { app, Menu, shell } = require("electron");
 const { createWindow } = require("./window");
-
+const { aboutWindow } = require('./about');
 const isMac = process.platform === "darwin";
 
 const template = [
@@ -8,8 +8,10 @@ const template = [
     ? [
         {
           label: app.name,
-          submenu: [
-            { role: "about" },
+          submenu: [{
+            label: 'About ' + app.name,
+            click: aboutWindow
+            },
             { type: "separator" },
             { role: "services" },
             { type: "separator" },
@@ -74,6 +76,8 @@ const template = [
   {
     role: "help",
     submenu: [
+      { label: "About",
+        click: aboutWindow},
       {
         label: "Documentation",
         click: async () => {

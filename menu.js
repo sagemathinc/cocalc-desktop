@@ -1,6 +1,6 @@
 const { app, Menu, shell } = require("electron");
 const { createWindow } = require("./window");
-const { aboutWindow } = require('./about');
+const { aboutWindow } = require("./about");
 const isMac = process.platform === "darwin";
 
 const template = [
@@ -8,9 +8,10 @@ const template = [
     ? [
         {
           label: app.name,
-          submenu: [{
-            label: 'About ' + app.name,
-            click: aboutWindow
+          submenu: [
+            {
+              label: "About " + app.name,
+              click: aboutWindow,
             },
             { type: "separator" },
             { role: "services" },
@@ -18,8 +19,6 @@ const template = [
             { role: "hide" },
             { role: "hideothers" },
             { role: "unhide" },
-            { type: "separator" },
-            { role: "quit" },
           ],
         },
       ]
@@ -29,30 +28,29 @@ const template = [
     submenu: [
       {
         label: "New Window",
-        click: createWindow,
+        click: () => createWindow(true),
       },
-      isMac ? { role: "close" } : { role: "quit" },
     ],
   },
   {
-    label: 'Edit',
+    label: "Edit",
     submenu: [
-      { role: 'undo' },
-      { role: 'redo' },
-      { type: 'separator' },
-      { role: 'cut' },
-      { role: 'copy' },
-      { role: 'paste' },
-      { type: 'separator' },
-      { role: 'delete' },
-      { role: 'selectAll' },
-    ]
+      { role: "undo" },
+      { role: "redo" },
+      { type: "separator" },
+      { role: "cut" },
+      { role: "copy" },
+      { role: "paste" },
+      { type: "separator" },
+      { role: "delete" },
+      { role: "selectAll" },
+    ],
   },
   {
     label: "View",
     submenu: [
-      { role: "reload" },
-      { role: "forceReload" },
+      /*{ role: "reload" },
+      { role: "forceReload" },*/
       { role: "toggleDevTools" },
       { type: "separator" },
       { role: "togglefullscreen" },
@@ -76,8 +74,7 @@ const template = [
   {
     role: "help",
     submenu: [
-      { label: "About",
-        click: aboutWindow},
+      { label: "About", click: aboutWindow },
       {
         label: "Documentation",
         click: async () => {

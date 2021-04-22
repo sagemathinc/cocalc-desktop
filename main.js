@@ -1,5 +1,5 @@
 const { app, BrowserWindow } = require("electron");
-const { createWindow } = require("./window");
+const { createWindow, closeMainWindow } = require("./window");
 
 app.whenReady().then(() => {
   createWindow();
@@ -14,6 +14,5 @@ app.whenReady().then(() => {
 app.on("window-all-closed", () => {
   app.quit();
 });
-
 
 require("./menu");

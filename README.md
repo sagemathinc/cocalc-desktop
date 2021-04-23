@@ -1,6 +1,6 @@
 # CoCalc Desktop
 
-Download [a release](https://github.com/sagemathinc/cocalc-desktop/releases) and install it on your computer.
+[Download a release](https://github.com/sagemathinc/cocalc-desktop/releases) and install it on your computer.
 
 ## What this is
 
@@ -19,7 +19,6 @@ cd cocalc-desktop
 npm ci
 npm start
 ```
-
 
 ## Other goals
 

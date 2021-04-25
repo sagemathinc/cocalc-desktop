@@ -1,6 +1,8 @@
 # CoCalc Desktop
 
-[Download a release](https://github.com/sagemathinc/cocalc-desktop/releases) and install it on your computer.
+## Windows and MacOS binaries
+
+[Download a binary](https://github.com/sagemathinc/cocalc-desktop/releases) and install it on Windows or MacOS.  For Linux, see the quickstart below.
 
 ## What this is
 

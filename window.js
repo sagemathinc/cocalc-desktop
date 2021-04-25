@@ -1,4 +1,4 @@
-const { BrowserWindow } = require("electron");
+const { BrowserWindow, shell } = require("electron");
 const windowStateKeeper = require("electron-window-state");
 const path = require("path");
 let windowState = undefined;
@@ -25,6 +25,14 @@ function createWindow(isAdditional) {
   if (!isAdditional) {
     windowState.manage(win);
   }
+
+  // See https://stackoverflow.com/questions/32402327/how-can-i-force-external-links-from-browser-window-to-open-in-a-default-browser
+  // This ensures that clicking links that open another tab use the normal OS
+  // browser, rather than trying to create a broken electron window.
+  win.webContents.on("new-window", function (e, url) {
+    e.preventDefault();
+    shell.openExternal(url);
+  });
 
   win.loadFile("index.html");
 

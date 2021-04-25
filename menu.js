@@ -19,6 +19,7 @@ const template = [
             { role: "hide" },
             { role: "hideothers" },
             { role: "unhide" },
+            { role: "quit" },
           ],
         },
       ]

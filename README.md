@@ -1,5 +1,7 @@
 # CoCalc Desktop
 
+[Download a release](https://github.com/sagemathinc/cocalc-desktop/releases) and install it on your computer.
+
 ## What this is
 
 This initial goal of cocalc-desktop is to provide a minimal easy-to-install version of CoCalc for MS Windows and MacOS (both M1 and x86) that addresses the following problems:
@@ -8,6 +10,15 @@ This initial goal of cocalc-desktop is to provide a minimal easy-to-install vers
 - **No extensions:** Browser extensions or other browser configuration can cause significant performance issues for CoCalc, and this desktop app provides a more well defined and predictable host for using CoCalc.
 
 Initially, cocalc-desktop really does is provide a nice icon and embed the main site https://cocalc.com in a full-body iframe.  It's very similar to simply installing CoCalc as a minimal progressive web application.
+
+## Development Quickstart
+
+```sh
+git clone https://github.com/sagemathinc/cocalc-desktop
+cd cocalc-desktop
+npm ci
+npm start
+```
 
 ## Other goals
 

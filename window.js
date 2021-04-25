@@ -13,13 +13,13 @@ function createWindow(isAdditional) {
   }
   const win = new BrowserWindow({
     show: false,
-    useContentSize: true,
     width: isAdditional ? 1024 : windowState.width,
     height: isAdditional ? 768 : windowState.height,
     x: isAdditional ? Math.round(200 * Math.random()) : windowState.x,
     y: isAdditional ? Math.round(200 * Math.random()) : windowState.y,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
+      nativeWindowOpen: true,
     },
   });
 
@@ -56,6 +56,8 @@ function createWindow(isAdditional) {
   win.on("close", () => {
     win.destroy();
   });
+
+  return win;
 }
 
 exports.createWindow = createWindow;

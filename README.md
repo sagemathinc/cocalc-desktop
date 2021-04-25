@@ -11,9 +11,9 @@ This initial goal of cocalc-desktop is to provide a minimal easy-to-install vers
 - **Keyboard shortcuts:** Provide a way of running CoCalc where browser keyboard shortcuts do not interfere at all with usability.  E.g, it should be possible to use Emacs in a terminal with standard keyboard shortcuts.
 - **No extensions:** Browser extensions or other browser configuration can cause significant performance issues for CoCalc, and this desktop app provides a more well defined and predictable host for using CoCalc.
 
-Initially, cocalc-desktop really does is provide a nice icon and embed the main site https://cocalc.com in a full-body iframe.  It's very similar to simply installing CoCalc as a minimal progressive web application.
+Initially, all that cocalc-desktop does is provide a nice icon and embed the main site https://cocalc.com in an iframe using [ElectronJS](https://www.electronjs.org/).  This is similar to installing CoCalc as a minimal progressive web application (via Google Chrome).   There are a number of subtle issues that do come up though, involving pop-up windows, external links, etc., that we address.
 
-## Development Quickstart
+## Development quickstart
 
 ```sh
 git clone https://github.com/sagemathinc/cocalc-desktop

@@ -1,5 +1,6 @@
 const { BrowserWindow, shell } = require("electron");
 const windowStateKeeper = require("electron-window-state");
+
 const path = require("path");
 let windowState = undefined;
 

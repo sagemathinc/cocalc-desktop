@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "about-window": "^1.14.0",
+    "electron-context-menu": "^2.5.1",
     "electron-squirrel-startup": "^1.0.0",
     "electron-window-state": "^5.0.3"
   },

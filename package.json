@@ -15,18 +15,18 @@
   "author": "William Stein",
   "license": "AGPLv3 + Commons Clause",
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.54",
-    "@electron-forge/maker-deb": "^6.0.0-beta.54",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
-    "@electron-forge/maker-zip": "^6.0.0-beta.54",
-    "electron": "^12.0.4",
-    "electron-builder": "^22.10.5",
-    "prettier": "^2.2.1"
+    "@electron-forge/cli": "^6.0.0-beta.66",
+    "@electron-forge/maker-deb": "^6.0.0-beta.66",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.66",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.66",
+    "@electron-forge/maker-zip": "^6.0.0-beta.66",
+    "electron": "^20.1.3",
+    "electron-builder": "^23.3.3",
+    "prettier": "^2.7.1"
   },
   "dependencies": {
-    "about-window": "^1.14.0",
-    "electron-context-menu": "^2.5.2",
+    "about-window": "^1.15.2",
+    "electron-context-menu": "^3.5.0",
     "electron-squirrel-startup": "^1.0.0",
     "electron-window-state": "^5.0.3"
   },

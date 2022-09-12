@@ -1,7 +1,7 @@
 const { app, BrowserWindow } = require("electron");
 const { createWindow, closeMainWindow } = require("./window");
 
-const disposeContextMenu = require("./context-menu");
+require("./context-menu");
 
 app.whenReady().then(() => {
   createWindow();
@@ -14,7 +14,6 @@ app.whenReady().then(() => {
 });
 
 app.on("window-all-closed", () => {
-  disposeContextMenu();
   app.quit();
 });
 

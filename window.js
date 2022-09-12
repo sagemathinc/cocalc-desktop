@@ -35,7 +35,7 @@ function createWindow(isAdditional) {
     shell.openExternal(url);
   });
 
-  win.loadFile("index.html");
+  win.loadURL("https://cocalc.com");
 
   // See https://dev.to/vadimdemedes/making-electron-apps-feel-native-on-mac-52e8
   // though I don't think it really helps at all for us.  Waiting the 1s before

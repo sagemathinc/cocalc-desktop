@@ -1,8 +1,5 @@
 # CoCalc Desktop
 
-
-**WARNING:** This is currently broken due to a recent content security update to https://cocalc.com.  See https://github.com/sagemathinc/cocalc-desktop/issues/5
-
 ## Windows and MacOS binaries
 
 [Download a binary](https://github.com/sagemathinc/cocalc-desktop/releases) and install it on Windows or MacOS.  For Linux, see the quickstart below.

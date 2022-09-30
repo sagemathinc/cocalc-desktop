@@ -50,8 +50,8 @@ const template = [
   {
     label: "View",
     submenu: [
-      /*{ role: "reload" },
-      { role: "forceReload" },*/
+      { role: "reload" },
+      { role: "forceReload" },
       { role: "toggleDevTools" },
       { type: "separator" },
       { role: "togglefullscreen" },

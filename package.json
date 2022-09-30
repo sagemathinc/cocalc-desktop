@@ -1,8 +1,8 @@
 {
   "name": "cocalc-desktop",
-  "productName": "CoCalc",
+  "productName": "CoCalc Desktop",
   "version": "1.1.2",
-  "description": "This is the CoCalc desktop application.",
+  "description": "CoCalc Desktop is a lightweight wrapper around https://cocalc.com, but without browser extensions or browser keyboard shortcuts that can interfere with using CoCalc.",
   "main": "./dist/main.js",
   "scripts": {
     "build": "npx tsc",

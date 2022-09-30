@@ -1,11 +1,11 @@
 // This is from https://www.npmjs.com/package/electron-context-menu
 // It makes it so you see something when you right click.
 
-const contextMenu = require("electron-context-menu");
-const { shell } = require("electron");
+import contextMenu from "electron-context-menu";
+import { shell } from "electron";
 
-exports.default = contextMenu({
-  prepend: (defaultActions, parameters, browserWindow) => [
+const menu = contextMenu({
+  prepend: (_defaultActions, parameters, _browserWindow) => [
     {
       label: "Search Google for “{selection}”",
       // Only show it when right-clicking text
@@ -20,3 +20,5 @@ exports.default = contextMenu({
     },
   ],
 });
+
+export default menu;

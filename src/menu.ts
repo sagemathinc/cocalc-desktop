@@ -1,6 +1,7 @@
-const { app, Menu, shell } = require("electron");
-const { createWindow } = require("./window");
-const { aboutWindow } = require("./about");
+import { app, Menu, shell } from "electron";
+import { createWindow } from "./window";
+import { aboutWindow } from "./about";
+
 const isMac = process.platform === "darwin";
 
 const template = [
@@ -109,5 +110,5 @@ const template = [
   },
 ];
 
-const menu = Menu.buildFromTemplate(template);
+const menu = Menu.buildFromTemplate(template as any);
 Menu.setApplicationMenu(menu);

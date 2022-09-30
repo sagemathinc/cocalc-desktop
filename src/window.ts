@@ -1,10 +1,11 @@
-const { BrowserWindow, shell } = require("electron");
-const windowStateKeeper = require("electron-window-state");
+import { BrowserWindow, shell } from "electron";
+import windowStateKeeper from "electron-window-state";
+import type { State } from "electron-window-state";
+import { join } from "path";
 
-const path = require("path");
-let windowState = undefined;
+let windowState: State | undefined = undefined;
 
-function createWindow(isAdditional) {
+export function createWindow(isAdditional: boolean = false) {
   if (windowState == null) {
     windowState = windowStateKeeper({
       defaultWidth: 1000,
@@ -18,8 +19,7 @@ function createWindow(isAdditional) {
     x: isAdditional ? Math.round(200 * Math.random()) : windowState.x,
     y: isAdditional ? Math.round(200 * Math.random()) : windowState.y,
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"),
-      nativeWindowOpen: true,
+      preload: join(__dirname, "preload.js"),
     },
   });
 
@@ -59,5 +59,3 @@ function createWindow(isAdditional) {
 
   return win;
 }
-
-exports.createWindow = createWindow;

@@ -1,7 +1,7 @@
-const { app, BrowserWindow } = require("electron");
-const { createWindow, closeMainWindow } = require("./window");
-
-require("./context-menu");
+import { app, BrowserWindow } from "electron";
+import { createWindow } from "./window";
+import "./context-menu";
+import "./menu";
 
 app.whenReady().then(() => {
   createWindow();
@@ -17,4 +17,3 @@ app.on("window-all-closed", () => {
   app.quit();
 });
 
-require("./menu");

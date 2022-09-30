@@ -1,7 +1,6 @@
-const openAboutWindow = require("about-window").default;
-const { app } = require("electron");
+import openAboutWindow from "about-window";
 
-function aboutWindow() {
+export function aboutWindow() {
   openAboutWindow({
     product_name: "CoCalc",
     homepage: "https://cocalc.com",
@@ -13,5 +12,3 @@ function aboutWindow() {
     /* open_devtools: process.env.NODE_ENV !== 'production', */
   });
 }
-
-exports.aboutWindow = aboutWindow;

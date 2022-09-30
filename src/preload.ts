@@ -1,1 +1,3 @@
 window.addEventListener("DOMContentLoaded", () => {});
+
+export {};

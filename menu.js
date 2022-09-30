@@ -42,9 +42,18 @@ const template = [
       { role: "cut" },
       { role: "copy" },
       { role: "paste" },
-      { type: "separator" },
       { role: "delete" },
       { role: "selectAll" },
+      /*{ type: "separator" },
+      {
+        label: "Find",
+        click: async () => {
+          win = BrowserWindow.getAllWindows()[0];
+          const contents = win.webContents;
+          const findInPage = new FindInPage(contents);
+          findInPage.openFindWindow();
+        },
+      },*/
     ],
   },
   {

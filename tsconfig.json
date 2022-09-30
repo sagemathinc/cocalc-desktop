@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "dist",
+    "outDir": "out",
     "incremental": true,
     "target": "es2020",
     "module": "commonjs",
@@ -19,7 +19,7 @@
     "sourceMap": true,
     "strictNullChecks": true,
     "moduleResolution": "node",
-    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
+    "tsBuildInfoFile": "out/tsconfig.tsbuildinfo"
   },
-  "exclude": ["node_modules", "build", "dist"]
+  "exclude": ["node_modules", "build", "out", "dist"]
 }
